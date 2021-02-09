@@ -8,7 +8,7 @@ class Modal extends Component  {
     /// some javascript
     /// this.props unda gamoviyenoT
     shouldComponentUpdate(nextProps,  nextState) {
-       if (nextProps.show !== this.props.show ) {
+       if (nextProps.show !== this.props.show || nextProps.children !== this.props.children ) {
            return true;
        }
        else {
