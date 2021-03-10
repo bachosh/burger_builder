@@ -95,33 +95,20 @@ class BurgerBuilder extends Component {
       }
 
       purchaseContinueHandler = () => {
-        //alert('You continue');
-        // this.setState({ loading: true});
-        // const order = {
-        //     ingredients: this.state.ingredients,
-        //     price: this.state.totalPrice,
-        //     customer: {
-        //         name: 'bacho 1',
-        //         address: {
-        //             street: 'kukurishvili ',
-        //             zipcode: '0177799',
-        //             country: 'Georgia'
-        //         },
-        //         email: 'kukuri@bitnewsebos.ge'
-        //     },
-        //     deliveryMethod: 'fastest'
-   
-        // }
 
-        /// .json marto firebazis gamo gvaq mititebuli
-        // axios.post('orders.json',order)
-        // .then(response => {
-        //     this.setState({ loading: false, purchasing: false});
-        // })
-        // .catch(error => 
-        //     {this.setState({ loading: false, purchasing: false});
-        // }); 
-        this.props.history.push('/checkout');
+        const queryParams = [];
+        for (let i in this.state.ingredients) {
+            queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
+        } //encodeURiComponent  url istvis amzadebs strings
+
+        queryParams.push('price=' + this.state.totalPrice); 
+        const  queryString = queryParams.join('&');      
+        this.props.history.push({
+            pathname: '/checkout',
+            search: '?' + queryString
+        }            
+        );
+        console.log('BurgerBuilder-purchaseContinueHandler-queryString: ' + queryString);
       }
 
     render(){
