@@ -12,3 +12,23 @@ class Samagalito extends Component  {
 }
 
 export default Samagalito;
+
+
+///////////////  componentebi ////
+
+// import React from 'react';
+// const name1 = (props) => (
+//     <div>\</div>
+// );
+
+// export default name1;
+
+
+// import React from 'react';
+// const name1 = (props) => {
+//     return (
+//             <div>test</div>
+//            );
+// };
+
+// export default name1;
