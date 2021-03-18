@@ -25,7 +25,7 @@ class Checkout extends Component {
       }
     }
     this.setState({ingredients: ingredients,totalPrice: price});
-    console.log('Checkout-componentDidMount-ingredients:' + this.props.location.search);
+//console.log('Checkout-componentDidMount-ingredients:' + this.props.location.search);
   }
 
   checkoutCancelledHandler = () => {

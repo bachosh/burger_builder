@@ -4,7 +4,6 @@ import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = ( props ) => {
-console.log(this.props);
  
 //(hashivitaa props.ingredients)
     let transformedIngredients = Object.keys( props.ingredients )  //shlis arrayd da abrunebs keys. javascriptis func
